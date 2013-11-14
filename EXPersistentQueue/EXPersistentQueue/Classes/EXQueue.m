@@ -1,4 +1,5 @@
 #import "EXQueue.h"
+#import "DDLog.h"
 
 #define DEFINE_SHARED_INSTANCE_USING_BLOCK(block) \
 static dispatch_once_t pred = 0; \

@@ -20,6 +20,7 @@
 		8FD4CE9621CF82ED126A6FBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4CC5BDCDF2E8202FB7FC1 /* UIKit.framework */; };
 		8FD4CE9B547766DFB44DC942 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4C14D45F2EC32D84336CB /* Foundation.framework */; };
 		8FD4CEE565C26B5A3086AD6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4CCBE0133F5182D529F4A /* main.m */; };
+		E2329C17A8074A07AB08E5D2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73941BEE3ED94E4BA21FB381 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,12 +34,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1EB5D3E3F94622B65E0DB3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		73941BEE3ED94E4BA21FB381 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD4C013593795F7A22ADA68 /* EXPersistentQueue-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EXPersistentQueue-Prefix.pch"; sourceTree = "<group>"; };
 		8FD4C0A347A684E5D2AE2DBE /* EXPersistentQueueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXPersistentQueueTests.m; sourceTree = "<group>"; };
 		8FD4C14D45F2EC32D84336CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FD4C14DBB202B5D91B38AA1 /* EXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXAppDelegate.h; sourceTree = "<group>"; };
 		8FD4C240173DEBDE512FA5FD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8FD4C3DCBD9B3C4AB980863D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8FD4C42F720D64364562FCE4 /* EXPersistentQueue.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = EXPersistentQueue.podspec; path = ../EXPersistentQueue.podspec; sourceTree = "<group>"; };
 		8FD4C440A0CB4B4CCF550806 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
 		8FD4C4F26C1C5C10EDE417ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8FD4C53A9EDD6C0E1451CB45 /* EXPersistentQueueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "EXPersistentQueueTests-Info.plist"; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 				8FD4C6E569D13FE87151360B /* Foundation.framework in Frameworks */,
 				8FD4CD9A757545BD42C5F472 /* CoreGraphics.framework in Frameworks */,
 				8FD4CE9621CF82ED126A6FBD /* UIKit.framework in Frameworks */,
+				E2329C17A8074A07AB08E5D2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +124,8 @@
 				8FD4CDE8EDC213A664AD1F0E /* EXPersistentQueueTests */,
 				8FD4C240173DEBDE512FA5FD /* LICENSE */,
 				8FD4C3DCBD9B3C4AB980863D /* README.md */,
+				8FD4C42F720D64364562FCE4 /* EXPersistentQueue.podspec */,
+				0D1EB5D3E3F94622B65E0DB3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +145,7 @@
 				8FD4C7BCEC6115E3067C29BB /* CoreGraphics.framework */,
 				8FD4CC5BDCDF2E8202FB7FC1 /* UIKit.framework */,
 				8FD4CD281F499CBD47CACE6C /* XCTest.framework */,
+				73941BEE3ED94E4BA21FB381 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD4C5D2F38AAFB65799AAF7 /* Build configuration list for PBXNativeTarget "EXPersistentQueue" */;
 			buildPhases = (
+				A8031D7B086347128ED86EE4 /* Check Pods Manifest.lock */,
 				8FD4C23C473750E4D91236DB /* Sources */,
 				8FD4CA766890A5308964C95E /* Frameworks */,
 				8FD4C420BC9760D5515E0825 /* Resources */,
+				27FD55AE02C6407A86572BD7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +245,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27FD55AE02C6407A86572BD7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8031D7B086347128ED86EE4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8FD4C23C473750E4D91236DB /* Sources */ = {
@@ -326,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -335,12 +378,14 @@
 		};
 		8FD4CA41BCA3B1B7B1A3C052 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D1EB5D3E3F94622B65E0DB3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXPersistentQueue/EXPersistentQueue-Prefix.pch";
 				INFOPLIST_FILE = "EXPersistentQueue/EXPersistentQueue-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -363,12 +408,14 @@
 		};
 		8FD4CDFCA6FB3A37D85E8E0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D1EB5D3E3F94622B65E0DB3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXPersistentQueue/EXPersistentQueue-Prefix.pch";
 				INFOPLIST_FILE = "EXPersistentQueue/EXPersistentQueue-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,6 +471,7 @@
 				8FD4C3DB9C70B8F08D041706 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FD4C44F2BFF010A2D184E83 /* Build configuration list for PBXProject "EXPersistentQueue" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +489,7 @@
 				8FD4CDFCA6FB3A37D85E8E0C /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
